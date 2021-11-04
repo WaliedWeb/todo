@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import styles from './Form.module.css';
 
 type FormProps = {
-    onSubmit: (todo: {
-        title: string;
-        description: string;
-        isDone: boolean
-    }) => void;
+  onSubmit: (todo: {
+    title: string;
+    description: string;
+    isDone: boolean;
+  }) => void;
 };
 
 function Form({ onSubmit }: FormProps): JSX.Element {

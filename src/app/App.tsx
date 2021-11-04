@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Todo from './components/Todo/Todo';
 import styles from './App.module.css';
 import Title from './components/Title/Title';
@@ -17,23 +17,23 @@ function App(): JSX.Element {
       isDone: false,
     },
     {
-      title: "Buy new laces",
-      description: "Colors: Neon green, hotpink and Gouda",
+      title: 'Buy new laces',
+      description: 'Colors: Neon green, hotpink and Gouda',
       isDone: false,
     },
     {
-      title: "Retie the white sneakers",
+      title: 'Retie the white sneakers',
       description: "I'm tired of falling on my face",
       isDone: false,
-    }
+    },
   ]);
   function handleSubmit(todo: {
     title: string;
     description: string;
-    isDone: boolean
+    isDone: boolean;
   }) {
     const newTodos = [...todos];
-    newTodos.push(todo)
+    newTodos.push(todo);
     setTodos(newTodos);
   }
 
@@ -41,16 +41,16 @@ function App(): JSX.Element {
     todos: {
       title: string;
       description: string;
-      isDone: boolean
+      isDone: boolean;
     }[]
   ) {
     return todos.map((todo) => {
       return (
         <Todo
           key={todo.title}
-          title= {todo.title}
-          description = { todo.description }
-          isDone = { todo.isDone }
+          title={todo.title}
+          description={todo.description}
+          isDone={todo.isDone}
         />
       );
     });
