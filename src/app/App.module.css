@@ -40,3 +40,10 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.appContainer {
+  display: grid;
+  place-items: center;
+  margin: 1.5rem;
+  gap: 2rem;
+}

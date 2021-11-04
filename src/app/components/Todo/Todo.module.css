@@ -1,0 +1,19 @@
+.todo {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 5px solid rgb(42, 85, 85);
+  border-radius: 2rem;
+  box-shadow: 0 0.4rem 0 rgb(42, 85, 85);
+  background: rgb(238, 39, 4);
+  color: aliceblue;
+  padding: 1rem 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.done {
+  background: rgb(1, 129, 101);
+}

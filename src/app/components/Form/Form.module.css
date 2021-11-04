@@ -1,0 +1,5 @@
+.form {
+  display: grid;
+  border: 2px solid hotpink;
+  padding: 10px;
+}
