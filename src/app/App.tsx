@@ -6,12 +6,12 @@ import Form from './components/Form/Form';
 
 function App(): JSX.Element {
   function handleSubmit(todo) {
-    console.log(todo.title, todo.description)
+    console.log(todo.title, todo.description);
   }
   return (
     <div className={styles.appContainer}>
       <Title>Todo App</Title>
-      <Form onSubmit={handleSubmit}/>
+      <Form onSubmit={handleSubmit} />
       <Todo
         title="Polish shoes"
         description="All shoes in the cabinet next to the apartment door"

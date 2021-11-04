@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Todo.module.css';
-import type { ReactNode } from 'react'
-import classes from '../Title/Title.module.css'
+import type { ReactNode } from 'react';
+import classes from '../Title/Title.module.css';
 
 type TodoProps = {
   isDone: boolean;
