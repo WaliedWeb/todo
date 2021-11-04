@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import styles from './Form.module.css';
 
-function Form({ onSubmit }): JSX.Element {
+type FormProps = {
+    onSubmit: (todo: {
+        title: string;
+        description: string;
+        isDone: boolean
+    }) => void;
+};
+
+function Form({ onSubmit }: FormProps): JSX.Element {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onSubmit({ title, description });
+    onSubmit({ title, description, isDone: false });
   }
 
   return (
@@ -32,16 +40,5 @@ function Form({ onSubmit }): JSX.Element {
     </form>
   );
 }
-// <>
-//     <form>
-//             <label> htmlFor="">
-//                 Title</label>
-//             <input type="text" />
-//             <label htmlFor="">Description</label>
-//             <input type="text"/>
-//             <button>Submit</button>
-//     </form>
-// </>
-// )
 
 export default Form;
